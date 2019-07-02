@@ -1,1 +1,38 @@
-<p>products works!</p>
+<div class="card m-5">
+  <div class="card-header"></div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Product Image</th>
+            <th>Product Id</th>
+            <th>Product Name</th>
+            <th>Product Code</th>
+            <th>Release Date</th>
+            <th>Price</th>
+            <th>Star Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products">
+            <td>
+              <img
+                [src]="product.imageUrl"
+                [title]="product.productName"
+                [style.margin.px]="imgMargin"
+                [style.width.px]="imgWidth"
+              />
+            </td>
+            <td>{{ product.productId }}</td>
+            <td>{{ product.productName }}</td>
+            <td>{{ product.productCode }}</td>
+            <td>{{ product.releaseDate }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.starRating }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
