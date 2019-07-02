@@ -1,1 +1,19 @@
-<p>welcome works!</p>
+<div class="card m-5">
+  <div class="card-header">
+    {{ headTitle }}
+  </div>
+  <div class="card-body d-flex flex-column align-items-center">
+    <img
+      src="https://images.unsplash.com/photo-1561132680-7e62e534e67f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+      alt="shopping basket"
+      [style.margin.px]="imgMargin"
+      [style.width.px]="imgWidth"
+    />
+    <h6>Product management App</h6>
+    <p>
+      Created by :
+      <a href="http://www.jamalguyo.co.ke" class="text-secondary">Jamal Guyo</a>
+    </p>
+    <span class="text-muted text-secondary">&copy; 2019</span>
+  </div>
+</div>
