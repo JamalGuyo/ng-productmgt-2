@@ -1,6 +1,19 @@
 <div class="card m-5">
-  <div class="card-header"></div>
+  <div class="card-header">
+    <h3>Product List</h3>
+  </div>
   <div class="card-body">
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class="col-xs-4">
+          <h6>Filter By Name:</h6>
+        </div>
+        <div class="col-xs-6 ml-2">
+          <input class="form-control" type="text" [(ngModel)]="listFilter" />
+          <span class="text-secondary m-2">{{ listFilter }}</span>
+        </div>
+      </div>
+    </div>
     <div class="table-responsive">
       <table class="table">
         <thead>
@@ -21,7 +34,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let product of products">
+          <tr *ngFor="let product of filteredProducts">
             <td>
               <img
                 *ngIf="imgStatus"
