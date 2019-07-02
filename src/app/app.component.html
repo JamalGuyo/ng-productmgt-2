@@ -3,8 +3,10 @@
 >
   <a class="navbar-brand">{{ appTitle }}</a>
   <ul class="nav nav-pills">
-    <li><a class="nav-link">Home</a></li>
-    <li><a class="nav-link">Products</a></li>
+    <li><a [routerLink]="['/welcome']" class="nav-link text-light">Home</a></li>
+    <li>
+      <a [routerLink]="['/products']" class="nav-link text-light">Products</a>
+    </li>
   </ul>
 </nav>
 <div class="container">
