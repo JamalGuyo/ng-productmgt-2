@@ -5,8 +5,14 @@
       <table class="table">
         <thead>
           <tr>
-            <th>Product Image</th>
-            <th>Product Id</th>
+            <th>
+              <button
+                class="btn btn-sm btn-outline-primary"
+                (click)="toggleImage()"
+              >
+                {{ imgStatus ? 'Hide' : 'show' }} images
+              </button>
+            </th>
             <th>Product Name</th>
             <th>Product Code</th>
             <th>Release Date</th>
@@ -18,13 +24,13 @@
           <tr *ngFor="let product of products">
             <td>
               <img
+                *ngIf="imgStatus"
                 [src]="product.imageUrl"
                 [title]="product.productName"
                 [style.margin.px]="imgMargin"
                 [style.width.px]="imgWidth"
               />
             </td>
-            <td>{{ product.productId }}</td>
             <td>{{ product.productName }}</td>
             <td>{{ product.productCode }}</td>
             <td>{{ product.releaseDate }}</td>

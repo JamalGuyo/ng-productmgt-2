@@ -9,6 +9,7 @@ import { IProduct } from './product';
 export class ProductsComponent implements OnInit {
   imgMargin: number = 10;
   imgWidth: number = 50;
+  imgStatus: boolean = false;
   products: IProduct[] = [
     {
       productId: 1,
@@ -36,4 +37,8 @@ export class ProductsComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  toggleImage(): void {
+    this.imgStatus = !this.imgStatus;
+  }
 }
